@@ -1,0 +1,134 @@
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 45px 0;
+}
+@media (max-width: 1024px) {
+  .container {
+    width: 95%;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    width: 97%;
+    padding: 38px 0;
+  }
+}
+
+.head {
+  padding: 15px;
+  background-color: #1D1D1F;
+  border-radius: 5px;
+}
+.head .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .head .flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.head .flex p {
+  color: #B0B0B0;
+}
+.head__user {
+  position: relative;
+  width: 38%;
+}
+@media (max-width: 992px) {
+  .head__user {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .head__user {
+    min-width: 320px;
+  }
+}
+.head__user .vector1 {
+  color: #3F3F46;
+  width: 100%;
+}
+.head__user .vector2 {
+  position: absolute;
+  left: 5px;
+  top: 6px;
+}
+.head__user .vector3 {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.head__user .userName {
+  font-size: 20px;
+  position: absolute;
+  left: 73px;
+  top: 40%;
+  transform: translateY(-50%);
+  color: #E8E8E8;
+}
+.head__user .number {
+  position: absolute;
+  top: 40%;
+  right: 12%;
+  transform: translateY(-50%);
+  color: #AAAAAA;
+}
+.head__user .rank {
+  position: absolute;
+  left: 17px;
+  top: 40%;
+  transform: translateY(-50%);
+  color: #ECB613;
+}
+.head__name {
+  margin: 0;
+  color: #EFEFEF;
+}
+.head__name b {
+  color: #B0B0B0;
+}
+
+.title {
+  width: 90px;
+  height: 20px;
+  margin: 60px auto 15px 0;
+  padding: 15px;
+  background-color: #222327;
+  color: #C0C0C0;
+  border-radius: 5px;
+}
+
+.main {
+  min-height: 500px;
+  background-color: #222327;
+  border-radius: 8px;
+  padding: 15px 38px;
+}
+.main__title {
+  font-size: 18px;
+  margin-top: 45px;
+  margin-bottom: 0;
+}
+.main p {
+  color: #EFEFEF;
+}
+
+@media (max-width: 360px) {
+  .head {
+    padding: 15px 5px;
+  }
+  .head__user {
+    min-width: 270px;
+  }
+  .head__user .vector3 {
+    width: 70px;
+    height: 100%;
+  }
+  .head__user .number {
+    right: 8%;
+  }
+}/*# sourceMappingURL=dashboard.css.map */

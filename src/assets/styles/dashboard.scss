@@ -1,0 +1,128 @@
+@import "./global";
+
+.container{
+    max-width:1024px;
+    margin: 0 auto;
+    padding: $xl-5 0;
+    @media(max-width:1024px){
+        width: 95%;
+    }
+    @media(max-width:576px){
+        width: 97%;
+        padding: $xl-4 0;
+    }
+}
+
+.head{
+    padding: $md;
+    background-color: #1D1D1F;
+    border-radius: 5px;
+    .flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media(max-width:600px){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        p{
+            color: #B0B0B0;
+        }
+    }
+    &__user{
+        position: relative;
+        width: 38%;
+        @media(max-width:992px){
+            width: 50%;
+        }
+        @media(max-width:767px){
+           min-width: 320px;
+        }
+        .vector1{
+            color: $primary;
+             width: 100%;
+        }
+        .vector2{
+            position: absolute;
+            left: 5px;
+            top: 6px;
+        }
+        .vector3{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .userName{
+            font-size: $xl-1;
+            position: absolute;
+            left: 73px;
+            top: 40%;
+            transform: translateY(-50%);
+            color:#E8E8E8;
+        }
+        .number{
+            position: absolute;
+            top: 40%;
+            right: 12%;
+            transform: translateY(-50%);
+            color: #AAAAAA;
+        }
+        .rank{
+            position:absolute;
+            left: 17px;
+            top: 40%;
+            transform: translateY(-50%);
+            color:#ECB613;
+        }
+       
+    }
+    &__name{
+        margin: 0;
+        color: $text-color;
+        b{
+            color: #B0B0B0;
+        }
+    }
+}
+
+.title{
+    width: 90px;
+    height: $xl-1;
+    margin: $xll auto $md 0;
+    padding: $md;
+    background-color: #222327;
+    color: #C0C0C0;
+    border-radius: 5px;
+}
+
+.main{
+    min-height: 500px;
+    background-color: #222327;
+    border-radius: 8px;
+    padding: $md $xl-4;
+    &__title{
+        font-size: 18px;
+        margin-top: $xl-5;
+        margin-bottom: 0;
+    }
+    p{
+        color: $text-color;
+    }
+}
+
+@media (max-width:360px){
+    .head{
+        padding: $md 5px;
+        &__user{
+        min-width:270px ;
+        
+            .vector3{
+              width: 70px;
+              height: 100%;  
+            }
+            .number{
+                right: 8%;
+            }
+        }
+    }
+}
