@@ -100,10 +100,11 @@
     background-color: #222327;
     border-radius: 8px;
     padding: $md $xl-4;
-    &__title{
+    &__link{
         font-size: 18px;
         margin-top: $xl-5;
         margin-bottom: 0;
+        color: $text-color;
     }
     p{
         color: $text-color;

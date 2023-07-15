@@ -8,10 +8,11 @@ import img3 from "../assets/images/vector3.png"
 function Dashboard(){
     const {data, name, setName} = useContext(ApiContext);
     const[result, setResult] = useState([]);
+    const url = "https://www.codewars.com/kata/"
    
     function getResult(){
     let page = 0;
-    fetch(`https://www.codewars.com/api/v1/users/${name}/code-challenges/completed?page=${page}`,)
+    fetch(`https://www.codewars.com/api/v1/users/${name}/code-challenges/completed?page=${page}`)
     .then((response)=>response.json())
     .then((result)=>{
         setResult(result.data);
@@ -20,8 +21,8 @@ function Dashboard(){
 
     useEffect(() => {
         getResult();
-        setName('');
-        //  console.log(result);
+         setName('');
+        // console.log(result);
       }, )
     
     return(
@@ -45,8 +46,8 @@ function Dashboard(){
             <div className="title">Solution list</div>
             <div className="main">
                {
-                result.slice(0, 3).map((item)=>{
-                    return ( <div><p className="main__title">{item.name}</p>
+                result.map((item)=>{
+                    return ( <div><a className="main__link" href={url + item.id} target="blank">{item.name}</a>
                             <p>{`CompletedLanguages: ${item.completedLanguages}`}</p></div>
                     )
                 })
